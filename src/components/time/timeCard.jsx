@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import SpinnerLoad from "../spinner";
 import axios from 'axios';
 
 // Importing Component
-import DynamicError from "../errorComponent";
+import DynamicError from "../Dynamicerror";
 
 // Importing SVG's
 import { ReactComponent as TemperatureCelcius } from '../../assets/svg/temperature_celcius.svg';
@@ -24,12 +24,6 @@ function TimeCard({ setTypeweather }) {
 
 
     let { lat, lon } = useParams()
-
-    let navigate = useNavigate()
-
-    function handlNavigate(route) {
-        navigate(route)
-    }
 
     useEffect(() => {
         if (loading) {
@@ -81,15 +75,14 @@ function TimeCard({ setTypeweather }) {
                             error.length > 0 ?
                                 // Si hay un error devuelve formato de Error.
                                 <div className="errorCard_container">
-
                                     <DynamicError nameError={error} />
                                 </div>
                                 :
                                 // Si NO hay error renderiza la carta.
                                 <div className="weatherCard_container">
                                     <div className="headerWeather">
-                                        <img src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} />
-                                        <h1>{weather.name.length > 0 ? weather.name : `Lat: ${lat} | Lon: ${lon}`}</h1>
+                                        <img src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={"NoAlt"} />
+                                        <h1>{weather.name.length > 0 ? weather.name : `Lat: ${lat} Lon: ${lon}`}</h1>
                                         <h3>{weather.weather[0].description}</h3>
                                         {
                                             console.log(weather)

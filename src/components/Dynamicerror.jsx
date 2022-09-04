@@ -13,7 +13,7 @@ function DynamicError({ nameError }) {
 
     useEffect(() => {
         setError(nameError)
-    }, [])
+    }, [nameError])
 
 
     return (

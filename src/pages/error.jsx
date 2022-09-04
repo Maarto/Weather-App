@@ -2,7 +2,7 @@ import React from "react";
 
 // Importing Components
 import BackgroundManager from "../components/backgrounds";
-import DynamicError from "../components/errorComponent";
+import DynamicError from "../components/Dynamicerror";
 
 function ErrorPage() {
 

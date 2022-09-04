@@ -5,7 +5,7 @@ import BackgroundManager from "../components/backgrounds";
 function HomePage(props) {
     return (
         <>
-            <BackgroundManager/>
+            <BackgroundManager />
             <div className="form_container">
                 <HomeForm />
             </div>
