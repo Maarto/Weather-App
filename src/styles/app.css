@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+
+    /* Colores */
+
+    --backgroundColor: rgba(190, 220, 255, 0.466);
+    --navigationColorTr: rgba(27, 66, 111, 0.5);
+
+    --subtitleColor: rgba(206, 206, 206, 1);
+    --buttonColor: rgba(27, 66, 111, 1);
+    --buttonColorHover: rgb(49, 118, 197);
+
+    --borderColorInput: rgba(75, 73, 73, 1);
+    --inputbgColor: rgba(217, 217, 217, 0.43);
+
+    --titletextColor: rgb(236, 236, 236);
+
+    /* Propiedades */
+
+    --box-shadow1: 0 0.5rem 2rem rgba(0, 0, 0, 0.800);
+    --box-shadow2: 0 1rem 3rem rgba(0, 0, 0, 0.596);
+    --box-shadow3: 0px 5px 16px rgba(0, 0, 0, 0.25);
+
+    /* Fuente */
+
+    font-family: sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+/*Texts*/
+
+.error_tit {
+    color: #ff8080;
+    font-weight: bold;
+}
+
+/* App - BackGround */
+
+.backgroundManagerCont {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.background_Filter {
+    background: var(--backgroundColor);
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+/* <------------ Navigation Bar ------------------->*/
+
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: var(--navigationColorTr);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+    box-shadow: var(--box-shadow3);
+}
+
+.nav_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 4rem;
+}
+
+nav .nav_logo svg {
+    height: 41px;
+    width: 64px;
+}
+
+nav .nav_logo h3 {
+    color: white;
+}
+
+nav a {
+    color: var(--titletextColor);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-right: 4rem;
+}
+
+nav a:hover {
+    border-bottom: 1px solid white;
+    color: white;
+    transition: all 300ms ease-in-out;
+}
+
+/*<--------------- HomePage ------------------>*/
+
+/* Posición del formulario - Contenedor*/
+
+.form_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Formulario */
+
+.form_container h1 {
+    color: var(--titletextColor);
+    margin: 4rem 0 0 0;
+}
+
+.form_container form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 8.6rem;
+    background: var(--navigationColorTr);
+    border-radius: 3rem;
+    width: 44rem;
+    height: auto;
+}
+
+.inputCont {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 2rem;
+}
+
+.inputCont svg {
+    position: absolute;
+    margin: 0 0 0 1rem;
+}
+
+.form_inputs {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 4.3rem;
+}
+
+.form_inputs input {
+    width: 34rem;
+    height: 4rem;
+    color: white;
+    background: var(--inputbgColor);
+    border-radius: 0.9rem;
+    border: 1px solid var(--borderColorInput);
+    padding: 0 0 0 4rem;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.form_inputs input:focus {
+    box-shadow: var(--box-shadow3);
+}
+
+.form_inputs input::placeholder {
+    color: var(--subtitleColor);
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+
+.form_container button {
+    background: var(--buttonColor);
+    border-radius: 1rem;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 4rem;
+    width: 20rem;
+    height: 3rem;
+}
+
+.form_container button:hover {
+    background: var(--buttonColorHover);
+    transition: all 400ms ease-in-out;
+}
+
+/* <------------ Time Card ----------------->*/
+
+.timeForm_cont {
+    margin-top: 8rem;
+    background: var(--navigationColorTr);
+    width: 43rem;
+    height: 4rem;
+    border-radius: 1.2rem;
+}
+
+.timeForm_cont form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.8rem;
+}
+
+.timeForm_cont input {
+    width: 15rem;
+    height: 2rem;
+    color: white;
+    background: var(--inputbgColor);
+    border-radius: 0.9rem;
+    /* border: 1px solid var(--borderColorInput); */
+
+    padding: 0 0 0 4rem;
+    font-weight: bold;
+    font-size: 1rem;
+    
+}
+
+.timeForm_cont button {
+    background: var(--inputbgColor);
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.timeForm_cont button:hover {
+    background: var(--buttonColorHover);
+    transition: all 300ms ease-in-out;
+}
+
+.inputTimeCont {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 2rem;
+}
+
+.inputTimeCont svg {
+    position: absolute;
+    margin: 0 0 0 1rem;
+}
+
+
+.timeCard_Container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.time_card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--navigationColorTr);
+    border-radius: 2rem;
+    width: 44rem;
+    min-height: 20rem;
+    height: auto;
+    margin-top: 3rem;
+}
+
+
+
+/* Spinner */
+
+.spinnerLoading h1 {
+    margin-top: 2rem;
+    color: white;
+}
+
+/* <----------- Weather Card ----------------->*/
+
+.weatherCard_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.weatherCard_container h1 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.headerWeather {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom: 0.4rem solid white;
+    width: 30rem;
+}
+
+.headerWeather h3 {
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.body_container {
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2rem;
+}
+
+.bodycontent {
+    display: flex;
+    align-items: center;
+    margin: 0 4rem 2rem 4rem;
+    /* max-width: 50%; */
+}
+
+.bodycontent h3 {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.bodycontent svg {
+    margin: 0 1rem 0 0;
+}
+
+/* <----------- Error Styles ----------------->*/
+
+.errorCard_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.errorCard_container svg {
+    margin-top: 1rem;
+}
+
+.errorCard_container h1 {
+    color: white;
+}
+
+.errorCard_container h3 {
+    color: white;
+    margin-top: 2rem;
+    font-weight: bold;
+    font-size: 1rem;
+    border-bottom: 2px solid white;
+}
+
+.errorCard_container button {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    border-radius: 0.4rem;
+    background: var(--navigationColorTr);
+    width: 13rem;
+    height: 3rem;
+}
+
+.errorCard_container button:hover {
+    background: var(--buttonColorHover);
+    transition: all 200ms ease-in-out;
+}
+
+
+.error404 {
+    padding-top: 15rem;
+}
+
+.coloCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 2rem;
+    width: 40rem;
+    background: var(--navigationColorTr);
+}
