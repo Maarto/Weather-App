@@ -41,8 +41,6 @@ function TimeCard({ setTypeweather }) {
                 ])
                 setLoading(false)
             }).catch((e) => {
-                console.log(e.response)
-
                 if (e.response.data) {
                     let errorCases = {
                         "wrong latitude": "La latitud ingresada es inválida.",
@@ -51,9 +49,6 @@ function TimeCard({ setTypeweather }) {
                         "unexpected": "Error inesperado!",
                         "ERR_NETWORK": "Error en la conexión con la API!"
                     }
-
-                    console.log(e)
-
                     if (errorCases[e.response.data.message]) {
                         setError(errorCases[e.response.data.message])
                     } else {
