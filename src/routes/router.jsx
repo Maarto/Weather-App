@@ -14,7 +14,7 @@ function RouterManager() {
             <NavigationBar />
             <Routes>
                 <Route path='/' element={<HomePage />} />
-                <Route path='/search/:lat/:lon' element={<CardPage />} />
+                <Route path='/search/:lon/:lat' element={<CardPage />} />
                 <Route path='*' element={<ErrorPage />} />
             </Routes>
         </>
