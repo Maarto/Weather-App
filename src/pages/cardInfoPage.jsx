@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import BackgroundManager from "../components/backgrounds";
+import BackgroundManager from "../components/util/backgroundManager";
 import TimeCard from '../components/time/timeCard';
-import TimeForm from "../components/timeForm";
+import TimeForm from "../components/time/timeForm";
 
 
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as CloudLogo } from '../assets/svg/VectorCloud.svg';
+import { ReactComponent as CloudLogo } from '../../assets/svg/VectorCloud.svg';
 import { Link } from 'react-router-dom'
 
 function NavigationBar() {

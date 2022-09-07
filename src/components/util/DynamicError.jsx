@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ReactComponent as WarningCircle } from '../assets/svg/warning-circle.svg';
+import { ReactComponent as WarningCircle } from '../../assets/svg/warning-circle.svg';
 function DynamicError({ nameError }) {
 
     let [error, setError] = useState("")

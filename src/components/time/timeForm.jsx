@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ReactComponent as Search } from '../assets/svg/SearchSVG.svg'
-import { ReactComponent as Latitude } from '../assets/svg/VectorLatitude.svg'
-import { ReactComponent as Longitude } from '../assets/svg/VectorLongitude.svg'
+import { ReactComponent as Search } from '../../assets/svg/SearchSVG.svg'
+import { ReactComponent as Latitude } from '../../assets/svg/VectorLatitude.svg'
+import { ReactComponent as Longitude } from '../../assets/svg/VectorLongitude.svg'
 
 
 function TimeForm() {

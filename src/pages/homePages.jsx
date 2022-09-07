@@ -1,8 +1,8 @@
 import React from "react";
 import HomeForm from "../components/home/homeForm";
-import BackgroundManager from "../components/backgrounds";
+import BackgroundManager from "../components/util/backgroundManager";
 
-function HomePage(props) {
+function HomePage() {
     return (
         <>
             <BackgroundManager />

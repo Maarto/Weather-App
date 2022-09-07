@@ -48,7 +48,7 @@
     font-weight: bold;
 }
 
-/* App - BackGround */
+/* App - BackGround Manager */
 
 .backgroundManagerCont {
     position: absolute;
@@ -56,7 +56,7 @@
     background-size: cover;
     background-position: center;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     z-index: -1;
 }
 
@@ -68,7 +68,7 @@
 }
 
 /* <------------ Navigation Bar ------------------->*/
- 
+
 nav {
     position: fixed;
     width: 100vw;
@@ -112,7 +112,7 @@ nav a:hover {
 
 /*<--------------- HomePage ------------------>*/
 
-/* Posición del formulario - Contenedor*/
+/* [ Formulario ] */
 
 .form_container {
     display: flex;
@@ -120,11 +120,11 @@ nav a:hover {
     justify-content: center;
 }
 
-/* Formulario */
 
 .form_container h1 {
     color: var(--titletextColor);
-    margin: 4rem 0 0 0;
+    margin: 3vw 0 0 0;
+    font-size: 2vw;
 }
 
 .form_container form {
@@ -132,10 +132,10 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 8.6rem;
+    margin-top: 12.6vw;
     background: var(--navigationColorTr);
     border-radius: 3rem;
-    width: 44rem;
+    width: 37vw;
     height: auto;
 }
 
@@ -143,31 +143,32 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin: 2rem;
+    margin: 1.5vw;
 }
 
 .inputCont svg {
     position: absolute;
     margin: 0 0 0 1rem;
+    width: 1.3vw;
 }
 
 .form_inputs {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-top: 4.3rem;
+    margin-top: 1.5vw;
 }
 
 .form_inputs input {
-    width: 34rem;
-    height: 4rem;
+    width: 30vw;
+    height: 8vh;
     color: white;
     background: var(--inputbgColor);
     border-radius: 0.9rem;
     border: 1px solid var(--borderColorInput);
-    padding: 0 0 0 4rem;
+    padding: 0 0 0 3.4vw;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1vw;
 }
 
 .form_inputs input:focus {
@@ -187,11 +188,11 @@ input[type=number]::-webkit-inner-spin-button {
     background: var(--buttonColor);
     border-radius: 1rem;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.3vw;
     font-weight: bold;
     margin-bottom: 4rem;
-    width: 20rem;
-    height: 3rem;
+    width: 17vw;
+    height: 5vh;
 }
 
 .form_container button:hover {
@@ -213,30 +214,36 @@ input[type=number]::-webkit-inner-spin-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 0.8rem;
+    width: 35vw;
+    height: 6vh;
 }
 
 .timeForm_cont input {
-    width: 15rem;
-    height: 2rem;
+    width: 100%;
+    height: 4vh;
     color: white;
     background: var(--inputbgColor);
     border-radius: 0.9rem;
     /* border: 1px solid var(--borderColorInput); */
-
-    padding: 0 0 0 4rem;
+    padding: 0 0 0 2.5vw;
     font-weight: bold;
-    font-size: 1rem;
-    
+    font-size: 0.75vw;
+
 }
 
 .timeForm_cont button {
     background: var(--inputbgColor);
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 2.2vw;
+    height: 4vh;
     border-radius: 0.5rem;
     cursor: pointer;
 }
+
+.timeForm_cont button svg {
+    width: 2vw;
+    height: 3vh;
+}
+
 
 .timeForm_cont button:hover {
     background: var(--buttonColorHover);
@@ -247,12 +254,13 @@ input[type=number]::-webkit-inner-spin-button {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-right: 2rem;
+    margin-right: 1vw;
 }
 
 .inputTimeCont svg {
     position: absolute;
-    margin: 0 0 0 1rem;
+    width: 1.2vw;
+    margin: 0 0 0 0.5vw;
 }
 
 
@@ -269,15 +277,15 @@ input[type=number]::-webkit-inner-spin-button {
     justify-content: center;
     flex-direction: column;
     background: var(--navigationColorTr);
-    border-radius: 2rem;
+    border-radius: 1.5rem;
     width: 35vw;
     height: 60vh;
-    margin-top: 3rem;
+    margin-top: 3vw;
 }
 
 
 
-/* Spinner */
+/* [ Spinner de carga ] */
 
 .spinnerLoading h1 {
     margin-top: 2rem;
@@ -296,7 +304,13 @@ input[type=number]::-webkit-inner-spin-button {
 
 .weatherCard_container h1 {
     color: white;
-    margin-bottom: 1rem;
+    font-size: 1.5vw;
+    margin-bottom: 0.5rem;
+}
+
+.weatherCard_container img {
+    width: 5vw;
+    height: 5vw;
 }
 
 .headerWeather {
@@ -310,13 +324,11 @@ input[type=number]::-webkit-inner-spin-button {
 
 .headerWeather h3 {
     color: white;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
+    font-size: 1vw;
 }
 
 .body_container {
-    /* display: flex;
-    align-items: center;
-    justify-content: space-between; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-top: 2rem;
@@ -325,8 +337,7 @@ input[type=number]::-webkit-inner-spin-button {
 .bodycontent {
     display: flex;
     align-items: center;
-    margin: 0 4rem 2rem 4rem;
-    /* max-width: 50%; */
+    margin: 0 3vw 1vw 3vw;
 }
 
 .bodycontent h3 {
@@ -350,30 +361,31 @@ input[type=number]::-webkit-inner-spin-button {
 
 .errorCard_container svg {
     margin-top: 1rem;
+    width: 12vw;
 }
 
 .errorCard_container h1 {
     color: white;
+    font-size: 1.8vw;
 }
 
 .errorCard_container h3 {
     color: white;
     margin-top: 2rem;
     font-weight: bold;
-    font-size: 1rem;
-    border-bottom: 2px solid white;
+    font-size: 1vw;
 }
 
 .errorCard_container button {
     margin-top: 3rem;
     margin-bottom: 3rem;
-    font-size: 1rem;
+    font-size: 1vw;
     font-weight: bold;
     color: white;
     border-radius: 0.4rem;
     background: var(--navigationColorTr);
-    width: 13rem;
-    height: 3rem;
+    width: 12vw;
+    height: 5vh;
 }
 
 .errorCard_container button:hover {
@@ -396,6 +408,4 @@ input[type=number]::-webkit-inner-spin-button {
     background: var(--navigationColorTr);
 }
 
-
-
-/*<--------- Media Styles ---------->*/
+/* <------------------ End Styles ---------------->*/ 

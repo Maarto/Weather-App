@@ -1,10 +1,10 @@
-import backgroundDefault from '../assets/images/BackgroundImage.png';
-import backgroundRain from '../assets/images/RainType.jpg';
-import backgroundMist from '../assets/images/MistState.jpg';
-import backgroundSnow from '../assets/images/SnowClouds.jpg';
-import backgroundClouds from '../assets/images/Clouds.jpg';
-import backgroundSkyClear from '../assets/images/SkyClear.jpg';
-import backgroundThunderStorm from '../assets/images/ThunderStorm.jpg';
+import backgroundDefault from '../../assets/images/BackgroundImage.png';
+import backgroundRain from '../../assets/images/RainType.jpg';
+import backgroundMist from '../../assets/images/MistState.jpg';
+import backgroundSnow from '../../assets/images/SnowClouds.jpg';
+import backgroundClouds from '../../assets/images/Clouds.jpg';
+import backgroundSkyClear from '../../assets/images/SkyClear.jpg';
+import backgroundThunderStorm from '../../assets/images/ThunderStorm.jpg';
 
 function selectBackground(id) {
 

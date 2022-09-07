@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import SpinnerLoad from "../spinner";
+import SpinnerLoad from "../util/spinner";
 import axios from 'axios';
 
 // Importing Component
-import DynamicError from "../Dynamicerror";
+import DynamicError from "../util/DynamicError";
 
 // Importing SVG's
 import { ReactComponent as TemperatureCelcius } from '../../assets/svg/temperature_celcius.svg';
@@ -27,7 +27,6 @@ function TimeCard({ setTypeweather }) {
 
     useEffect(() => {
         if (loading) {
-            console.log('haciendo acción')
             axios.get(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=ES&APPID=68310791186b882386508a6dbe33929a&units=metric`).then((res) => {
 
                 setWeather(res.data)
@@ -43,16 +42,19 @@ function TimeCard({ setTypeweather }) {
                 setLoading(false)
             }).catch((e) => {
 
-                console.log(e)
-
                 let errorCases = {
-                    "wrong latitude": "La Longitud o Latitud ingresada es inválida.",
-                    "wrong longitude": "La Longitud o Latitud ingresada es inválida.",
+                    "wrong latitude": "La latitud ingresada es inválida.",
+                    "wrong longitude": "La Longitud ingresada es inválida.",
                     "Internal error": "No hemos encontrado nada en esa dirección!",
                     "unexpected": "Error inesperado!"
                 }
 
-                setError(errorCases[e.response.data.message])
+                if(errorCases[e.response.data.message]){
+                    setError(errorCases[e.response.data.message])
+                } else {
+                    setError("Ha ocurrido un error inesperado.")
+                }
+
                 setLoading(false)
             })
         }
@@ -82,11 +84,8 @@ function TimeCard({ setTypeweather }) {
                                 <div className="weatherCard_container">
                                     <div className="headerWeather">
                                         <img src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={"NoAlt"} />
-                                        <h1>{weather.name.length > 0 ? weather.name : `Lat: ${lat} Lon: ${lon}`}</h1>
+                                        <h1>{weather.name.length > 0 ? ` ${weather.name} | ${weather.sys.country} ` : `Lat: ${lat} Lon: ${lon}`}</h1>
                                         <h3>{weather.weather[0].description}</h3>
-                                        {
-                                            console.log(weather)
-                                        }
                                     </div>
                                     <div className="body_container">
                                         {
