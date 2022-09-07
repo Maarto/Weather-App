@@ -41,22 +41,34 @@ function TimeCard({ setTypeweather }) {
                 ])
                 setLoading(false)
             }).catch((e) => {
+                console.log(e.response)
 
-                let errorCases = {
-                    "wrong latitude": "La latitud ingresada es inválida.",
-                    "wrong longitude": "La Longitud ingresada es inválida.",
-                    "Internal error": "No hemos encontrado nada en esa dirección!",
-                    "unexpected": "Error inesperado!"
-                }
+                if (e.response.data) {
+                    let errorCases = {
+                        "wrong latitude": "La latitud ingresada es inválida.",
+                        "wrong longitude": "La Longitud ingresada es inválida.",
+                        "Internal error": "No hemos encontrado nada en esa dirección!",
+                        "unexpected": "Error inesperado!",
+                        "ERR_NETWORK": "Error en la conexión con la API!"
+                    }
 
-                if(errorCases[e.response.data.message]){
-                    setError(errorCases[e.response.data.message])
+                    console.log(e)
+
+                    if (errorCases[e.response.data.message]) {
+                        setError(errorCases[e.response.data.message])
+                    } else {
+                        setError("Ha ocurrido un error inesperado.")
+
+                    }
+
+                    setLoading(false)
                 } else {
                     setError("Ha ocurrido un error inesperado.")
+                    setLoading(false)
                 }
-
-                setLoading(false)
             })
+
+
         }
     })
 
